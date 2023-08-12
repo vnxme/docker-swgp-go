@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  swgp-server:
+    container_name: swgp-server
+    image: vnxme/swgp-go:latest
+    network: host
+    restart: unless-stopped
+    volumes:
+      - ./server.json:/etc/swgp-go/config.json:ro
+  swgp-client:
+    container_name: swgp-client
+    image: vnxme/swgp-go:latest
+    network: host
+    restart: unless-stopped
+    volumes:
+      - ./client.json:/etc/swgp-go/config.json:ro

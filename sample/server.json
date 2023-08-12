@@ -1,0 +1,20 @@
+{
+    "servers": [
+        {
+            "name": "server",
+            "proxyListen": ":20220",
+            "proxyMode": "zero-overhead",
+            "proxyPSK": "sAe5RvzLJ3Q0Ll88QRM1N01dYk83Q4y0rXMP1i4rDmI=",
+            "proxyFwmark": 0,
+            "proxyTrafficClass": 0,
+            "wgEndpoint": "[2001:db8::1]:20221",
+            "wgFwmark": 0,
+            "wgTrafficClass": 0,
+            "mtu": 1500,
+            "batchMode": "",
+            "relayBatchSize": 0,
+            "mainRecvBatchSize": 0,
+            "sendChannelCapacity": 0
+        }
+    ]
+}
