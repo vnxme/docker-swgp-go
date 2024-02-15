@@ -2,12 +2,16 @@
     "servers": [
         {
             "name": "server",
+            "proxyListenNetwork": "",
             "proxyListen": ":20220",
             "proxyMode": "zero-overhead",
             "proxyPSK": "sAe5RvzLJ3Q0Ll88QRM1N01dYk83Q4y0rXMP1i4rDmI=",
             "proxyFwmark": 0,
             "proxyTrafficClass": 0,
+            "wgEndpointNetwork": "",
             "wgEndpoint": "[2001:db8::1]:20221",
+            "wgConnListenNetwork": "",
+            "wgConnListenAddress": "",
             "wgFwmark": 0,
             "wgTrafficClass": 0,
             "mtu": 1500,

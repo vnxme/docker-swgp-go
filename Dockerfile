@@ -5,7 +5,7 @@ FROM --platform=${BUILDPLATFORM:-linux/amd64} golang:${GOLANG_VERSION}-alpine${A
 
 RUN apk add --update --no-cache git
 
-RUN git clone --depth 1 --branch ${SWGPGO_BRANCH:-main} https://github.com/database64128/swgp-go /app
+RUN git clone --depth 1 --branch v1.5.0 https://github.com/database64128/swgp-go /app
 
 WORKDIR /app/cmd/swgp-go
 

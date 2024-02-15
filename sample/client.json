@@ -2,10 +2,14 @@
     "clients": [
         {
             "name": "client",
+            "wgListenNetwork": "",
             "wgListen": ":20222",
             "wgFwmark": 0,
             "wgTrafficClass": 0,
+            "proxyEndpointNetwork": "",
             "proxyEndpoint": "[2001:db8::2]:20220",
+            "proxyConnListenNetwork": "",
+            "proxyConnListenAddress": "",
             "proxyMode": "zero-overhead",
             "proxyPSK": "sAe5RvzLJ3Q0Ll88QRM1N01dYk83Q4y0rXMP1i4rDmI=",
             "proxyFwmark": 0,
