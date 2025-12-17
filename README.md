@@ -7,6 +7,7 @@ A set of [Docker images](https://hub.docker.com/r/vnxme/swgp-go) of Simple WireG
 - ARMv6 32-bit (linux/arm/v6)
 - IBM POWER8 (linux/ppc64le)
 - IBM z Systems (linux/s390x)
+- RISC-V 64-bit (linux/riscv64)
 
 ### Description
 Simple WireGuard Proxy (**SWGP**) is a universal and effective solution for WireGuard (**WG**) traffic obfuscation. The original implementation is written in Go by [@database64128](https://github.com/database64128) and published as [swgp-go](https://github.com/database64128/swgp-go).
