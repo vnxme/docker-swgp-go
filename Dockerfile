@@ -1,7 +1,7 @@
 ARG ALPINE_VERSION=3.23
 ARG GOLANG_VERSION=1.25.5
 
-FROM --platform=${BUILDPLATFORM:-linux/amd64} golang:${GOLANG_VERSION}-alpine${ALPINE_VERSION} as builder
+FROM --platform=${BUILDPLATFORM:-linux/amd64} golang:${GOLANG_VERSION}-alpine${ALPINE_VERSION} AS builder
 
 RUN apk add --update --no-cache git
 
@@ -18,7 +18,7 @@ RUN \
   go build -ldflags="-w -s" -o /usr/bin/swgp-go main.go
 
 
-FROM --platform=${TARGETPLATFORM:-linux/amd64} alpine:${ALPINE_VERSION}
+FROM alpine:${ALPINE_VERSION}
 
 COPY --from=builder /app/docs/config.json /etc/swgp-go/config.json
 COPY --from=builder /usr/bin/swgp-go /usr/bin/
