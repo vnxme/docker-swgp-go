@@ -1,11 +1,11 @@
 ARG ALPINE_VERSION=3.23
-ARG GOLANG_VERSION=1.25.5
+ARG GOLANG_VERSION=1.26.4
 
 FROM --platform=${BUILDPLATFORM:-linux/amd64} golang:${GOLANG_VERSION}-alpine${ALPINE_VERSION} AS builder
 
 RUN apk add --update --no-cache git
 
-RUN git clone --depth 1 --branch v1.8.0 https://github.com/database64128/swgp-go /app
+RUN git clone --depth 1 --branch v1.10.0 https://github.com/database64128/swgp-go /app
 
 WORKDIR /app/cmd/swgp-go
 
